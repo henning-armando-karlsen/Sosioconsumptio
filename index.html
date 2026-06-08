@@ -13536,7 +13536,7 @@
           if (pendingSectionId) lockTo(pendingSectionId); /* hold target across load */
           var endTag = '<' + '/script>';
           var html = tpl.textContent.split('<\\/script>').join(endTag);
-          if (IS_PUBLISHED) { html = html.replace(/<html/i, '<html class="is-published"'); }
+          if (IS_PUBLISHED) { html = html.replace(/<html/i, '<html class="is-published"'); }
           if (frame.dataset.blobUrl) { try { URL.revokeObjectURL(frame.dataset.blobUrl); } catch (e) {} }
           var blob = new Blob([html], { type: 'text/html;charset=utf-8' });
           var url = URL.createObjectURL(blob);
